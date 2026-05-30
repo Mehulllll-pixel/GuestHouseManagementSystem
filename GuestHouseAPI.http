@@ -1,2 +1,8 @@
-GET https://localhost:7159/api/Dashboard/summary
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjQiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9lbWFpbGFkZHJlc3MiOiJhZG1pbjFAdGVzdC5jb20iLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJBZG1pbiIsImV4cCI6MTc4MDE3ODY5OCwiaXNzIjoiR3Vlc3RIb3VzZUFQSSIsImF1ZCI6Ikd1ZXN0SG91c2VVc2VycyJ9.fsHVzDNyglH6jcG4fhe8mo4ZhQNpOJb1p2keke7mJWc
+POST https://localhost:7159/api/Booking
+Content-Type: application/json
+{
+  "userId": 3,
+  "roomType": "Single",
+  "checkInDate": "2026-06-01T00:00:00Z",
+  "checkOutDate": "2026-06-05T00:00:00Z"
+}

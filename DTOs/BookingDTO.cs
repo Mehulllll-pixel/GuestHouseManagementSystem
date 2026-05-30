@@ -6,8 +6,8 @@
 
         public string RoomType { get; set; } = string.Empty;
 
-        public DateTime CheckInDate { get; set; }
+        public DateTimeOffset CheckInDate { get; set; }
 
-        public DateTime CheckOutDate { get; set; }
+        public DateTimeOffset CheckOutDate { get; set; }
     }
 }
