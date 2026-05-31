@@ -5,4 +5,4 @@ Content-Type: application/json
   "roomType": "Single",
   "checkInDate": "2026-06-01T00:00:00Z",
   "checkOutDate": "2026-06-05T00:00:00Z"
-}
+}dotnet ef database update
