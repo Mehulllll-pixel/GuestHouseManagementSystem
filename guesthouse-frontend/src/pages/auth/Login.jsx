@@ -33,6 +33,13 @@ function Login() {
   const [loading, setLoading] = useState(false);
 
   const isGuest = selectedRoleId === 5;
+  const fillDemoAccount = () => {
+  setSelectedRoleId(1);
+  setEmployeeId("EMP001");
+  setEmail("admin@guesthouse.com");
+  setPassword("admin123");
+  setError("");
+  };
 
   const handleLogin = async () => {
     if (!selectedRoleId || !email || !password) {
@@ -157,6 +164,52 @@ function Login() {
           >
             {loading ? "Signing in..." : "Login"}
           </Button>
+          <Button
+  fullWidth
+  variant="outlined"
+  onClick={fillDemoAccount}
+  sx={{
+    mt: 2,
+    mb: 2,
+    textTransform: "none",
+    fontWeight: "bold",
+  }}
+>
+  🚀 Use Demo Admin Account
+</Button>
+          <Box
+  sx={{
+    backgroundColor: "#f8f9fa",
+    border: "1px solid #ddd",
+    borderRadius: 2,
+    p: 2,
+    mt: 1,
+  }}
+>
+  <Typography
+    variant="subtitle2"
+    fontWeight="bold"
+    gutterBottom
+  >
+    🚀 Demo Admin Account
+  </Typography>
+
+  <Typography variant="body2">
+    <strong>Role:</strong> Admin
+  </Typography>
+
+  <Typography variant="body2">
+    <strong>Employee ID:</strong> EMP001
+  </Typography>
+
+  <Typography variant="body2">
+    <strong>Email:</strong> admin@guesthouse.com
+  </Typography>
+
+  <Typography variant="body2">
+    <strong>Password:</strong> admin123
+  </Typography>
+</Box>
         </Box>
       </Container>
     </Box>
