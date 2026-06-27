@@ -167,6 +167,7 @@ function Login() {
           <Button
   fullWidth
   variant="outlined"
+  color="primary"
   onClick={fillDemoAccount}
   sx={{
     mt: 2,
