@@ -1,207 +1,246 @@
 # Guest House Management System
 
-A full-stack Guest House Management System designed to streamline room booking, guest management, maintenance tracking, and administrative operations.
-
-## Tech Stack
-
-### Backend
-- ASP.NET Core Web API (.NET 10)
-- Entity Framework Core
-- SQL Server
-- JWT Authentication
-- Role-Based Authorization
-
-### Frontend
-- React.js (In Development)
-
-### Database
-- SQL Server LocalDB
+A full-stack Guest House Management System built with **ASP.NET Core (.NET 10), React, Entity Framework Core, and SQL Server** to streamline room booking, guest management, maintenance tracking, and administrative operations.
 
 ---
 
-## Features
+## Live Demo
+
+**Frontend:** http://guest-house-management-system-ten.vercel.app/
+
+---
+
+## Demo Credentials
+
+| Field       | Value                                               |
+| ----------- | --------------------------------------------------- |
+| Role        | Admin                                               |
+| Employee ID | EMP001                                              |
+| Email       | [admin@guesthouse.com](mailto:admin@guesthouse.com) |
+| Password    | admin123                                            |
+
+Click **Use Demo Admin Account** on the login page to autofill the credentials.
+
+---
+
+# Features
 
 ### Authentication & Authorization
-- User Registration
-- User Login
-- JWT Token Authentication
-- Role-Based Access Control
+
+* JWT Authentication
+* Secure Login
+* Role-Based Access Control
+* Protected API Endpoints
 
 ### Room Management
-- Add Rooms
-- Update Room Details
-- View Available Rooms
-- View Occupied Rooms
-- Maintenance Room Tracking
+
+* Add Rooms
+* Update Room Details
+* View Available Rooms
+* Track Occupancy
+* Maintenance Status
 
 ### Booking Management
-- Create Booking
-- Approve Booking
-- Check-In
-- Check-Out
-- Booking History
+
+* Create Bookings
+* Approve Bookings
+* Check-In / Check-Out
+* Booking History
+
+### Guest Management
+
+* Guest Registration
+* Guest Stay Records
+* Booking History
 
 ### Dashboard
-- Room Statistics
-- Booking Statistics
-- Occupancy Monitoring
-- Monthly Booking Reports
 
-### Maintenance Management
-- Create Maintenance Requests
-- Track Maintenance Status
-- Maintenance History
+* Room Statistics
+* Booking Statistics
+* Occupancy Overview
+* Monthly Reports
+
+### Maintenance
+
+* Create Maintenance Requests
+* Track Request Status
+* Maintenance History
 
 ---
 
-## Project Structure
+# Technology Stack
 
-```
-GuestHouseManagementSystem/
+## Frontend
+
+* React.js
+* Vite
+* Material UI
+* React Router
+
+## Backend
+
+* ASP.NET Core Web API (.NET 10)
+* Entity Framework Core
+* JWT Authentication
+* Role-Based Authorization
+
+## Database
+
+* SQL Server
+
+## Deployment
+
+* Frontend: Vercel
+* Source Control: GitHub
+
+---
+
+# Project Structure
+
+```text
+GuestHouseManagementSystem
 │
-├── Backend/
-│   ├── Controllers/
-│   ├── Models/
-│   ├── DTOs/
-│   ├── Data/
-│   ├── Migrations/
-│   └── Program.cs
+├── Controllers/
+├── DTOs/
+├── Data/
+├── Migrations/
+├── Models/
+├── Properties/
 │
-├── Frontend/
-│   └── React Application
+├── guesthouse-frontend/
+│   ├── public/
+│   ├── src/
+│   └── package.json
 │
+├── Program.cs
 └── README.md
 ```
 
 ---
 
-## API Security
+# API Security
 
-This project uses JWT Authentication.
+All protected endpoints require a valid JWT access token.
 
-Protected endpoints require:
-
-```
+```http
 Authorization: Bearer <JWT_TOKEN>
 ```
 
 ---
 
-## Setup Instructions
+# Getting Started
 
-### Clone Repository
+## Clone Repository
 
 ```bash
 git clone https://github.com/Mehulllll-pixel/GuestHouseManagementSystem.git
 ```
 
-### Navigate to Backend
+## Backend
 
 ```bash
 cd GuestHouseManagementSystem
-```
 
-### Restore Packages
-
-```bash
 dotnet restore
-```
 
-### Configure Application
-
-Create an `appsettings.json` file from `appsettings.example.json`.
-
-Update:
-
-- SQL Server Connection String
-- JWT Secret Key
-
-### Run Migrations
-
-```bash
 dotnet ef database update
-```
 
-### Run Application
-
-```bash
 dotnet run
 ```
 
-Application will start at:
+Backend runs at:
 
 ```
 https://localhost:7159
 ```
 
+## Frontend
+
+```bash
+cd guesthouse-frontend
+
+npm install
+
+npm run dev
+```
+
+Frontend runs at:
+
+```
+http://localhost:5173
+```
+
 ---
 
-## Sample API Endpoints
+# API Endpoints
 
-### Authentication
+## Authentication
 
-| Method | Endpoint |
-|----------|----------|
-| POST | /api/Auth/register |
-| POST | /api/Auth/login |
+| Method | Endpoint           |
+| ------ | ------------------ |
+| POST   | /api/Auth/register |
+| POST   | /api/Auth/login    |
 
-### Rooms
+## Rooms
 
-| Method | Endpoint |
-|----------|----------|
-| GET | /api/Room |
-| POST | /api/Room |
-| PUT | /api/Room/{id} |
+| Method | Endpoint       |
+| ------ | -------------- |
+| GET    | /api/Room      |
+| POST   | /api/Room      |
+| PUT    | /api/Room/{id} |
 | DELETE | /api/Room/{id} |
 
-### Bookings
+## Bookings
 
-| Method | Endpoint |
-|----------|----------|
-| GET | /api/Booking |
-| POST | /api/Booking |
-| PUT | /api/Booking/approve/{id} |
-| PUT | /api/Booking/checkin/{id} |
-| PUT | /api/Booking/checkout/{id} |
+| Method | Endpoint                   |
+| ------ | -------------------------- |
+| GET    | /api/Booking               |
+| POST   | /api/Booking               |
+| PUT    | /api/Booking/approve/{id}  |
+| PUT    | /api/Booking/checkin/{id}  |
+| PUT    | /api/Booking/checkout/{id} |
 
-### Dashboard
+## Dashboard
 
-| Method | Endpoint |
-|----------|----------|
-| GET | /api/Dashboard/summary |
-| GET | /api/Dashboard/monthly-bookings |
-| GET | /api/Dashboard/available-rooms |
+| Method | Endpoint                        |
+| ------ | ------------------------------- |
+| GET    | /api/Dashboard/summary          |
+| GET    | /api/Dashboard/monthly-bookings |
 
 ---
 
-## Current Status
+# Project Status
 
 ### Completed
-- JWT Authentication
-- Role-Based Authorization
-- Room Management
-- Booking Management
-- Dashboard APIs
-- Maintenance APIs
-- Database Integration
 
-### In Progress
-- React Frontend Development
-- Deployment
-- API Documentation
+* JWT Authentication
+* Role-Based Authorization
+* Room Management
+* Booking Management
+* Guest Management
+* Dashboard
+* Maintenance Module
+* Responsive React Frontend
+* Live Deployment
 
----
+### Planned Improvements
 
-## Contributors
-
-### Backend Developer
-Mehul Garg
-
-### Frontend Developer
-(To Be Added)
+* Email Notifications
+* Calendar Integration
+* Docker Support
+* CI/CD Pipeline
+* Automated Testing
 
 ---
 
-## License
+# Author
 
-This project is for educational and portfolio purposes.
+**Mehul Garg**
+
+GitHub: https://github.com/Mehulllll-pixel
+
+---
+
+# License
+
+This project is intended for educational and portfolio purposes.
