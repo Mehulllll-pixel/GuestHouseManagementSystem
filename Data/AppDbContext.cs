@@ -26,7 +26,7 @@ namespace GuestHouseAPI.Data
         {
             base.OnModelCreating(modelBuilder);
 
-            // Role -> Users
+            // Role -> Users/players
             modelBuilder.Entity<User>()
                 .HasOne(u => u.Role)
                 .WithMany(r => r.Users)
