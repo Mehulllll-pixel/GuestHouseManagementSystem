@@ -93,6 +93,7 @@ Click **Use Demo Admin Account** on the login page to autofill the credentials.
 * Frontend: Vercel
 * Source Control: GitHub
 
+
 ---
 
 # Project Structure
@@ -238,6 +239,11 @@ http://localhost:5173
 **Mehul Garg**
 
 GitHub: https://github.com/Mehulllll-pixel
+
+**Miilee Sharma**
+
+GitHub: https://github.com/7mgppp
+
 
 ---
 
