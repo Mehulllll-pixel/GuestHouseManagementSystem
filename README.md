@@ -130,12 +130,6 @@ Authorization: Bearer <JWT_TOKEN>
 
 # Getting Started
 
-## Clone Repository
-
-```bash
-git clone https://github.com/Mehulllll-pixel/GuestHouseManagementSystem.git
-```
-
 ## Backend
 
 ```bash
