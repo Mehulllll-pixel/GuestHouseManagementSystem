@@ -226,21 +226,3 @@ http://localhost:5173
 * CI/CD Pipeline
 * Automated Testing
 
----
-
-# Author
-
-**Mehul Garg**
-
-GitHub: https://github.com/Mehulllll-pixel
-
-**Miilee Sharma**
-
-GitHub: https://github.com/7mgppp
-
-
----
-
-# License
-
-This project is intended for educational and portfolio purposes.
